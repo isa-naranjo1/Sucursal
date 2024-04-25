@@ -1,0 +1,52 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 30px;
+  color: #2E2A25;
+  position: fixed;
+  top: 0;
+  width: 94%;
+  z-index: 1000;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  flex-grow: 0.3; /* Permite que los elementos ocupen todo el espacio disponible */
+  font-size: larger;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.nav-item2 {
+  font-weight: bold;
+  border-bottom: 2px solid #2E2A25;
+}
+
+.nav-item1,
+.nav-item2,
+.nav-item3 {
+  margin-right: 20px;
+}
+
+.btn {
+  background-color: #2E2A25;
+  color: #FCF2E6;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 31.5px;
+  cursor: pointer;
+  font-family: 'Clash Display',sans-serif;
+  font-size: larger;
+}
+
