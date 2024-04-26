@@ -30,4 +30,16 @@
 .footer-item3,
 .footer-item4 {
   margin-right: 20px; /* Ajusta el margen entre los elementos */
+  font-weight: bold; /* Resalta el texto */
+}
+
+.footer-button {
+  background-color: #2E2A25;
+  color: #FCF2E6;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 31.5px;
+  cursor: pointer;
+  font-family: 'Clash Display', sans-serif;
+  font-size: larger;
 }

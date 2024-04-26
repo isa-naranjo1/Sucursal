@@ -1,15 +1,25 @@
-import React from 'react'
-import { Navbar } from './components/Navbar/Navbar'
-import { Footer } from './components/Footer/Footer'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Navbar } from './components/Navbar/Navbar';
+import { Footer } from './components/Footer/Footer';
+import { Inicio } from './components/Inicio/Inicio'; 
+import { SobreNosotros } from './components/SobreNosotros/SobreNosotros'; 
+import { Contacto } from './components/Contacto/Contacto'; 
 
-
-
-export default function App() {
-  return(
-      <>
-      <Navbar/>
-      <Footer/>
-      </>
-  )
-  
+function App() {
+  return (
+    <div className="App">
+      <Navbar /> {/* Navbar permanece */}
+      
+      <Routes> 
+        <Route path="/" element={<Inicio />} /> 
+        <Route path="/about-us" element={<SobreNosotros />} />
+        <Route path="/contact-us" element={<Contacto />} />
+      </Routes> 
+      
+      <Footer /> {/* Footer permanece */}
+    </div>
+  );
 }
+
+export default App;
