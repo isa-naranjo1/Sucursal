@@ -18,16 +18,14 @@
 }
 
 .footer-item {
-  margin: 0 20px; /* Ajusta el margen horizontal */
-  font-weight: bold;
-  font-size: larger;
+  text-decoration: none; /* Sin subrayado */
+  color: #2E2A25; /* Color del texto */
+  margin-right: 20px; /* Espacio entre enlaces */
+  font-weight: normal; /* No negrita */
 }
 
-
-/* Estilo de los elementos del footer */
-.footer-item1,
-.footer-item2,
-.footer-item3,
-.footer-item4 {
-  margin-right: 20px; /* Ajusta el margen entre los elementos */
+/* Estilo para el enlace activo */
+.active-footer-item {
+  font-weight: bold; /* Negrita para el enlace activo */
+  text-decoration: underline; /* Subrayado para el enlace activo */
 }

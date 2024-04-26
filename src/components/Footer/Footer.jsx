@@ -1,15 +1,41 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Footer.css'; 
 
 export function Footer() {
     return (
       <nav className="footer">
         <div>
-        <Link to="/contact-us" className="nav-item1">CONTACT</Link>
-          <span className="nav-item2">SOCIALS</span>
-          <Link to="/about-us" className="nav-item3">ABOUT US</Link>
-          <span className="nav-item4">WORK WITH US</span>
+        <NavLink
+          to="/contact-us"  
+          className={({ isActive }) => 
+            `nav-item ${isActive ? 'active-footer-item' : ''}`
+          }>
+          CONTACT
+        </NavLink> 
+        <NavLink 
+          to="/socials"  
+          className={({ isActive }) => 
+            `nav-item ${isActive ? 'active-footer-item' : ''}`
+          }>
+          SOCIALS
+        </NavLink> 
+        <NavLink 
+          to="/about-us"  
+          className={({ isActive }) => 
+            `nav-item ${isActive ? 'active-footer-item' : ''}`
+          }>
+          ABOUT US
+        </NavLink> 
+        <NavLink 
+          to="/work-with-us"  
+          className={({ isActive }) => 
+            `nav-item ${isActive ? 'active-footer-item' : ''}`
+          }>
+          WORK WITH US
+        </NavLink> 
+
+          
         </div>
       </nav>
     );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Navbar.css'; 
 import logo from '../../assets/logo.png'
 
@@ -11,11 +11,34 @@ export function Navbar() {
       <div className="navbar-left">
         <img src={logo} alt="Logo" className="logo" />
         
-        {/* Utiliza Link para los elementos de navegación */}
-        <Link to="/" className="nav-item">Home</Link> 
-        <Link to="/about-us" className="nav-item">About Us</Link>
-        <Link to="/contact-us" className="nav-item">Contact</Link>
-        <Link to="/proyectos" className="nav-item">Projects</Link> 
+        <NavLink 
+          to="/" 
+          className={({ isActive }) => 
+            `nav-item ${isActive ? 'active-nav-item' : ''}`
+          }>
+          Home
+        </NavLink>  
+        <NavLink 
+          to="/about-us" 
+          className={({ isActive }) => 
+            `nav-item ${isActive ? 'active-nav-item' : ''}`
+          }>
+          About Us
+        </NavLink>
+        <NavLink 
+          to="/contact-us" 
+          className={({ isActive }) => 
+            `nav-item ${isActive ? 'active-nav-item' : ''}`
+          }>
+          Contact
+        </NavLink>
+        <NavLink 
+          to="/proyectos" 
+          className={({ isActive }) => 
+            `nav-item ${isActive ? 'active-nav-item' : ''}`
+          }>
+          Projects
+        </NavLink> 
       </div>
       <div className="navbar-right">
         <button className="btn">Login</button>

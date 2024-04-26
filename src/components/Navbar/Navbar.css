@@ -28,15 +28,17 @@
   margin-right: 10px;
 }
 
-.nav-item2 {
-  font-weight: bold;
-  border-bottom: 2px solid #2E2A25;
+.nav-item {
+  text-decoration: none; /* Sin subrayado */
+  color: #2E2A25; /* Color del texto */
+  margin-right: 20px; /* Espacio entre enlaces */
+  font-weight: normal; /* No negrita */
 }
 
-.nav-item1,
-.nav-item2,
-.nav-item3 {
-  margin-right: 20px;
+/* Estilo para el enlace activo */
+.active-nav-item {
+  font-weight: bold; /* Negrita para el enlace activo */
+  text-decoration: underline; /* Subrayado para el enlace activo */
 }
 
 .btn {
