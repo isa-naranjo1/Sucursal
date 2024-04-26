@@ -5,6 +5,7 @@ import { Footer } from './components/Footer/Footer';
 import { Inicio } from './components/Inicio/Inicio'; 
 import { SobreNosotros } from './components/SobreNosotros/SobreNosotros'; 
 import { Contacto } from './components/Contacto/Contacto'; 
+import { Publish } from './components/Publish/Publish';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Inicio />} /> 
         <Route path="/about-us" element={<SobreNosotros />} />
         <Route path="/contact-us" element={<Contacto />} />
+        <Route path="/publish" element={<Publish />} />
       </Routes> 
       
       <Footer /> {/* Footer permanece */}

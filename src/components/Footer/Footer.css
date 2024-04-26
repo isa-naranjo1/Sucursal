@@ -4,10 +4,8 @@
   align-items: center; /* Alinea verticalmente */
   padding: 30px 30px;
   color: #2E2A25;
-  position: fixed;
   bottom: 0; /* Ubica el footer en la parte inferior de la pantalla */
   width: 100%; /* El footer debe ocupar todo el ancho */
-  z-index: 1000; /* Asegura que el footer esté por encima de otros elementos */
   background-color: #FCF2E6; /* Color de fondo */
 }
 
