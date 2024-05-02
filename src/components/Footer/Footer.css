@@ -1,0 +1,28 @@
+.footer {
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Alinea verticalmente */
+  padding: 30px 30px;
+  color: #2E2A25;
+  bottom: 0; /* Ubica el footer en la parte inferior de la pantalla */
+  width: 100%; /* El footer debe ocupar todo el ancho */
+}
+
+.footer-content { /* Una sección para el contenido del footer */
+  display: flex;
+  justify-content: center; /* Centra los elementos dentro del footer */
+  align-items: center;
+}
+
+.footer-item {
+  text-decoration: none; /* Sin subrayado */
+  color: #2E2A25; /* Color del texto */
+  margin-right: 20px; /* Espacio entre enlaces */
+  font-weight: normal; /* No negrita */
+}
+
+/* Estilo para el enlace activo */
+.active-footer-item {
+  font-weight: bold; /* Negrita para el enlace activo */
+  text-decoration: underline; /* Subrayado para el enlace activo */
+}
