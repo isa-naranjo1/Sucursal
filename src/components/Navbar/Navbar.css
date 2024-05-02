@@ -10,6 +10,12 @@
   z-index: 1000;
 }
 
+@media (max-width:630px){
+  .navbar{
+    display: none;
+  }
+}
+
 .navbar-left {
   display: flex;
   align-items: center;
@@ -50,5 +56,9 @@
   cursor: pointer;
   font-family: 'Clash Display',sans-serif;
   font-size: larger;
+}
+.btn:active,
+.btn:focus {
+  background-color: #22A6F8; /* Cambia el color de fondo al azul cuando el botón está activo (presionado) */
 }
 

@@ -40,9 +40,12 @@ export function Navbar() {
           Projects
         </NavLink> 
       </div>
-      <div className="navbar-right">
-        <button className="btn">Login</button>
-      </div>
+      
+        <NavLink to="/login" className="nav-item">
+          <div className="navbar-right">
+            <button className="btn">Login</button>
+          </div>
+        </NavLink>
     </nav>
     );
 }

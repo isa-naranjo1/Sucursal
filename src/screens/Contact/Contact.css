@@ -1,0 +1,111 @@
+
+.title-contact{
+  font-size: 500%;
+  font-weight: 700;
+  position: relative;
+  left: 16%;
+  margin-top: -46%;
+}
+@media (max-width: 642px) {
+  .title-contact {
+    font-size: 300%;
+    position: relative;
+    left: 16%;
+    margin-top: -66%;
+  }
+}
+
+@media (max-width: 430px) {
+  .title-contact {
+    font-size: 200%;
+    position: relative;
+    left: 16%;
+    margin-top: -110%;
+  }
+}
+
+.contact-form-container {
+  border: 3px solid #000;
+  padding: 20px;
+  width: 80%;
+  position: fixed;
+  left: 10%;
+  top: 33%;
+  }
+
+  @media (max-width: 430px) {
+    .contact-form-container {
+      border: 3px solid #000;
+      padding: 20px;
+      width: 73%;
+      position: fixed;
+      left: 8%;
+      top: 26%;
+    }
+  }
+  
+
+  .input{
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"],
+  input[type="email"]{
+    width: 98%;
+    border: none;
+    background-color: transparent;
+    min-height: 50px;
+    border-bottom: 1.5px solid #000; 
+  }
+
+  textarea {
+    width: 98%;
+    border: none;
+    background-color: transparent;
+    min-height: 100px; 
+    border-bottom: 1.5px solid #000;
+  }
+
+  @media (max-width: 430px) {
+    textarea {
+      width: 98%;
+      border: none;
+      background-color: transparent;
+      min-height: 150px;
+      border-bottom: 1.5px solid #000;
+    }
+  }
+
+  .input textarea::placeholder,
+  .input input::placeholder {
+    font-size: 18px; /* Tamaño del texto del placeholder */
+    color: #2E2A25; /* Color del texto del placeholder */
+  }
+  
+  .contact-btn{
+    padding: 14px 33px;
+    cursor: pointer;
+    border-color: #2E2A25;
+    border-radius: 20px;
+    font-size: 100%;
+    position: relative;
+    left: 45%;
+    align-items: center;
+    background-color: transparent;
+    font-family: inherit;
+}
+
+@media (max-width: 430px) {
+  .contact-btn {
+    padding: 14px 33px;
+    cursor: pointer;
+    border-color: #2E2A25;
+    border-radius: 20px;
+    font-size: 80%;
+    position: relative;
+    left: 28%;
+    align-items: center;
+    background-color: transparent;
+    font-family: inherit;
+  }
+}

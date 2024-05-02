@@ -110,9 +110,9 @@ export function Publish() {
           />
         </div>
       </div>
-      <div className='botones'>
-      <button onClick={handleSubmit}>Submit</button>
-      <button onClick={handleSave}>Save as draft</button>
+      <div>
+      <button className='btn1' onClick={handleSubmit}>Submit</button>
+      <button className='btn2' onClick={handleSave}>Save as draft</button>
       </div>
     </div>
   );

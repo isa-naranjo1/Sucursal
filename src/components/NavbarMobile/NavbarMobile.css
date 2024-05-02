@@ -1,0 +1,42 @@
+.navbar-web {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 30px;
+  color: #2E2A25;
+  position: fixed;
+  top: 0;
+  width: 94%;
+  z-index: 1000;
+}
+
+@media (min-width:629px){
+  .navbar-web{
+    display: none;
+  }
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  flex-grow: 0.3; /* Permite que los elementos ocupen todo el espacio disponible */
+  font-size: larger;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 70px;
+  margin-right: 10px;
+}
+
+.Menu,
+.img-login{
+background-color: transparent;
+border: none;
+}
+

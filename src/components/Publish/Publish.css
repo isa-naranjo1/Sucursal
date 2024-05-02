@@ -69,7 +69,8 @@
     display: none;
   }
   
-  button {
+  .btn2,
+  .btn1 {
     padding: 6px 12px; /* Disminuir el padding para hacer el botón más pequeño */
     min-width: 80px; /* Definir un ancho mínimo para que no sea muy pequeño */
     background-color: #4CAF50;
@@ -80,8 +81,4 @@
     margin: 10px;
   }
   
-  button:hover {
-    /* Efecto de hover para el botón */
-    background-color: #45a049; /* Un verde un poco más oscuro al pasar el mouse */
-  }
   
