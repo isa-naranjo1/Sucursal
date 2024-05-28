@@ -1,0 +1,192 @@
+.publish-container {
+  padding: 0 51px;
+  }
+
+.title-publish {
+  font-size: 500%;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 0;
+  margin-top: 100px;
+}
+    
+.publish-content {
+  padding: 20px;
+  border: 2px solid #2E2A25;
+  max-width: 100%;
+}
+
+.publish-field{
+  margin-bottom: 20px;
+}
+
+input[type="title"],
+input[type="description"]{
+  padding-left: 0;
+  font-family: 'Clash Display', sans-serif;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  min-height: 50px;
+  border-bottom: 1.5px solid #2E2A25; 
+}
+
+.publish-field input::placeholder {
+  font-size: 18px;
+  color: #2e2525;
+}
+
+.upload-field {
+  border-radius: 15px;
+  border: 2px solid #2E2A25;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 70%; 
+  position: relative;
+  margin: auto;
+  margin-bottom: 20px;
+}
+    
+.upload-field.dragover {
+  border-color: #00aaff;
+}
+    
+.file-preview {
+  max-width: 200px;
+  max-height: 200px;
+  margin-top: 10px;
+}
+
+.upload-field p {
+  font-size: 18px;
+}
+  
+.file-upload-btn{
+  padding: 14px 33px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 100%;
+  font-family: inherit;
+  margin: auto;
+  margin-bottom: 20px;
+  color: #FCF2E6;
+  background-color: #2E2A25;
+}
+#file-upload {
+  display: none;
+}
+
+.buttons-wrapper {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn1 {
+  padding: 14px 33px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 100%;
+  font-family: inherit;
+  color: #FCF2E6;
+  background-color: #22A6F8;
+  border: none;
+}
+    
+.btn2 {
+  padding: 14px 33px;
+  cursor: pointer;
+  border-color: #2E2A25;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 100%;
+  position: relative;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+@media (max-width: 480px) {
+  .publish-container {
+    padding: 0 20px;
+    }
+  
+  .title-publish {
+    font-size: 57px;
+    margin-top: 0;
+  }
+      
+  .publish-content {
+    margin-top: 54px;
+    padding: 20px;
+    border: 0.7px solid #2E2A25;
+    max-width: 100%;
+  }
+  
+  .publish-field{
+    margin-bottom: 30px;
+  }
+  
+  input[type="title"],
+  input[type="description"]{
+    font-size: 16px;
+    min-height: 30px;
+    border-bottom: 1.5px solid #2E2A25; 
+  }
+  
+  .publish-field input::placeholder {
+    font-size: 16px;
+  }
+  
+  .upload-field {
+    border-radius: 16px;
+    border: 0.7px solid #2E2A25;
+    width: 82%;
+    min-height: 280px;
+    margin-bottom: 20px;
+  }
+      
+  .file-preview {
+    max-width: 200px;
+    max-height: 200px;
+    margin-top: 10px;
+  }
+  
+  .upload-field p {
+    font-size: 18px;
+  }
+    
+  .file-upload-btn{
+    padding: 9px 15px;
+    border-radius: 16px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+  #file-upload {
+    display: none;
+  }
+  
+  .buttons-wrapper {
+    gap: 9px;
+  }
+  
+  .btn1 {
+    padding: 9px 15px;
+    border-radius: 16px;
+    font-size: 16px;
+  }
+      
+  .btn2 {
+    padding: 9px 15px;
+    border-radius: 16px;
+    font-size: 16px;
+  }
+}

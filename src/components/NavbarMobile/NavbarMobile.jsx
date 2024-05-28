@@ -2,9 +2,9 @@ import React, { useState } from 'react'; // Añade useState aquí
 import { NavLink } from 'react-router-dom';
 import './NavbarMobile.css'; 
 import logo from '../../assets/logo.png'
-import login from '../../acses/login-btn.png'
-import menu from '../../acses/menu-btn.png'
-import loginActive from '../../acses/loginActive.png';
+import login from '../../assets/login-btn.png'
+import menu from '../../assets/menu-btn.png'
+import loginActive from '../../assets/loginActive.png';
 
 export function NavbarMobile() {
   const [isButtonActive, setButtonActive] = useState(false);

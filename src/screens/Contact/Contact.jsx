@@ -1,7 +1,7 @@
 import React from 'react';
 import './Contact.css'; 
 
-const Contact = () => {
+export function Contact() {
   return (
     <div className='contact'>
         <h1 className='title-contact'>CONTACT US</h1>
@@ -16,10 +16,8 @@ const Contact = () => {
                 <div className="input">
                     <textarea placeholder="MESSAGE"></textarea>
                 </div>
-                    <button className='contact-btn'>Contact Us</button>
+                    <button className='contact-btn'>CONTACT US</button>
         </div>
     </div>
   );
 };
-
-export default Contact;

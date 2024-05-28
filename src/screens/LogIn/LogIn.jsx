@@ -1,15 +1,18 @@
 import React from 'react';
 import './LogIn.css'; 
-import google from '../../acses/google.png'
+import google from '../../assets/google.png'
 
-const LogIn = () => {
+export function LogIn() {
   return (
     <>
-        <h1 className='title-login'>LOG-IN</h1>
+        <div className='title-wrapper'>
+          <h1 className='title-login'>LOG-IN</h1>
          <div className='p-btn'>
              <p>Don't have an account?</p>
              <button className="sign-up-button">SING UP</button>
         </div>
+        </div>
+        
         
         <div className="LogIn-form-container">
                 <div className="input">
@@ -28,5 +31,3 @@ const LogIn = () => {
     </>
   );
 };
-
-export default LogIn;
