@@ -11,28 +11,38 @@ import { LogIn } from './Screens/LogIn/LogIn'
 import { Menu } from './Screens/Menu/menu';
 import { Publish } from './Screens/Publish/Publish';
 import { ColorProvider } from './Context/ColorContext';
+import { AuthProvider } from './Context/AuthContext';
+import { ProtectedRoute } from './Screens/Error/ProtectedRoute';
 
 function App() {
   return (
-    <ColorProvider>
-    <div className="App">
-      <Navbar /> {/* Navbar permanece */}
-      <NavbarMobile /> {/* Navbar permanece */}
-      
-      <Routes> 
-        <Route path="/" element={<Inicio />} /> 
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/contact-us" element={<Contact />} />
-        <Route path="/proyectos" element={<Projects />} />
-        <Route path="/login" element={<LogIn />} />
-        <Route path="/publish" element={<Publish />} />
-        <Route path="/menu" element={<Menu />} />
-      </Routes> 
-      
-      <Footer /> {/* Footer permanece */}
-    </div>
-    </ColorProvider>
+    <AuthProvider>
+      <ColorProvider>
+        <div className="App">
+          <Navbar /> {/* Navbar permanece */}
+          <NavbarMobile /> {/* Navbar permanece */}
+          
+          <Routes> 
+            <Route path="/" element={<Inicio />} /> 
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/contact-us" element={<Contact />} />
+            <Route path="/proyectos" element={<Projects />} />
+            <Route path="/login" element={<LogIn />} />
+            <Route 
+              path="/publish" 
+              element={
+                <ProtectedRoute>
+                  <Publish />
+                </ProtectedRoute>
+              } 
+            />
+            <Route path="/menu" element={<Menu />} />
+          </Routes> 
+          
+          <Footer /> {/* Footer permanece */}
+        </div>
+      </ColorProvider>
+    </AuthProvider>
   );
 }
-
 export default App;

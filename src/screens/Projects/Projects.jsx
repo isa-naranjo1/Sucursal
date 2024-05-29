@@ -8,6 +8,8 @@ export function Projects() {
   const [showDetail, setShowDetail] = useState(false);
   const [selectedProject, setSelectedProject] = useState('');
   const { setBackgroundColor } = useColor();
+  const [iframeLink, setIframeLink] = useState('');
+  const [projectDescription, setProjectDescription] = useState('');
 
   useEffect(() => {
     setBackgroundColor('#22A6F8');
@@ -16,8 +18,10 @@ export function Projects() {
     };
   }, [setBackgroundColor]);
 
-  const handleProjectClick = (projectName) => {
+  const handleProjectClick = (projectName,iframeLink,description) => {
     setSelectedProject(projectName);
+    setIframeLink(iframeLink);
+    setProjectDescription(description); 
     setShowDetail(true);
   };
 
@@ -85,7 +89,9 @@ export function Projects() {
                   />
                 </svg>
               </button>
+
               <ProjectImg onProjectClick={handleProjectClick} />
+              
               <button className='more-btn'>
                 MORE
                 <svg
@@ -118,9 +124,8 @@ export function Projects() {
                 </button>
               <div className='project-detail-display'>      
                 <h2 className="project-detail-title">{selectedProject}</h2>
-                <div className='project-detail-img'>
-                  <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/e69c54177943559.656f83856fbe4.jpg" alt="Project" />
-                </div>            
+                <p>{projectDescription}</p>
+                <iframe  src={iframeLink} title="Project Iframe" />          
               </div>
             </div>
           )}

@@ -1,15 +1,16 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css'; 
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.png';
 import { useColor } from '../../Context/ColorContext';
-
+import { useAuth } from '../../Context/AuthContext';
 
 export function Navbar() {
   const { backgroundColor } = useColor();
-  
-    return (
-      <nav className="navbar" style={{ backgroundColor }}>
+  const { currentUser, logout } = useAuth();
+
+  return (
+    <nav className="navbar" style={{ backgroundColor }}>
       <div className="navbar-left">
         <img src={logo} alt="Logo" className="logo" />
         
@@ -43,12 +44,23 @@ export function Navbar() {
         </NavLink> 
       </div>
       
-        <NavLink to="/login" className="nav-item">
-          <div className="navbar-right">
+      <div className="navbar-right">
+        {currentUser ? (
+          <>
+            <NavLink to="/publish" className="nav-item">
+              <button className="btn">Publish</button>
+            </NavLink>
+            <NavLink to="/profile" className="nav-item">
+              <button className="btn">Profile</button>
+            </NavLink>
+            <button className="btn" onClick={logout}>Logout</button>
+          </>
+        ) : (
+          <NavLink to="/login" className="nav-item">
             <button className="btn">Login</button>
-          </div>
-        </NavLink>
+          </NavLink>
+        )}
+      </div>
     </nav>
-    );
+  );
 }
-

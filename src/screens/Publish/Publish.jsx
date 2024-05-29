@@ -3,10 +3,11 @@ import './Publish.css';
 import { storage, db } from '../../firebase';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { v4 as uuidv4 } from 'uuid';
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc, getDocs } from 'firebase/firestore';
 import basura from '../../assets/basura.svg'
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom'
+
 
 
 export function Publish() {
@@ -67,16 +68,22 @@ export function Publish() {
     const imageRef = ref(storage, `images/${file.name + uuidv4()}`);
     await uploadBytes(imageRef, file);
     const url = await getDownloadURL(imageRef);
-    await addDoc(collection(db, 'projects'), {
+    
+    const selectedCategories = Object.keys(options).filter(key => options[key]);
+    
+    await addDoc(collection(db, 'documentos'), {
       title,
       description,
       imageUrl: url,
       autor,
       iframeLink,
-      categories,
+      categories: selectedCategories,
     });
-    console.log('Data added to Firestore:', { title, description, imageUrl: url, autor, iframeLink, categories });
+    
+    console.log('Data added to Firestore:', { title, description, imageUrl: url, autor, iframeLink, categories: selectedCategories });
   };
+  
+  
 
   const handleSubmit = () => {
     if (title && description && file && autor && iframeLink && categories) {
