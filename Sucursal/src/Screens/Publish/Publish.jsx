@@ -83,7 +83,6 @@ export function Publish() {
     console.log('Data added to Firestore:', { title, description, imageUrl: url, autor, iframeLink, categories: selectedCategories });
   };
   
-  
 
   const handleSubmit = () => {
     if (title && description && file && autor && iframeLink && categories) {
@@ -103,7 +102,13 @@ export function Publish() {
       }else if (
         result.dismiss === Swal.DismissReason.cancel
       ) {
-        window.location.reload(); 
+        setTitle('');
+        setFile(null);
+        setFileURL(null);
+        setDescription('');
+        setAutor('');
+        setIframeLink('');
+        setCategories([]);
       }
     })
 

@@ -19,8 +19,8 @@
 .navbar-left {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Distribuye el espacio entre los elementos */
-  flex-grow: 0.3; /* Permite que los elementos ocupen todo el espacio disponible */
+  justify-content: space-between;
+  flex-grow: 0.3;
   font-size: larger;
 }
 
@@ -36,16 +36,15 @@
 }
 
 .nav-item {
-  text-decoration: none; /* Sin subrayado */
-  color: #2E2A25; /* Color del texto */
-  margin-right: 20px; /* Espacio entre enlaces */
-  font-weight: normal; /* No negrita */
+  text-decoration: none;
+  color: #2E2A25;
+  margin-right: 20px;
+  font-weight: normal;
 }
 
-/* Estilo para el enlace activo */
 .active-nav-item {
-  font-weight: bold; /* Negrita para el enlace activo */
-  text-decoration: underline; /* Subrayado para el enlace activo */
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .btn {
@@ -57,9 +56,13 @@
   cursor: pointer;
   font-family: 'Clash Display',sans-serif;
   font-size: larger;
+  margin: 10px;
 }
 .btn:active,
 .btn:focus {
-  background-color: #22A6F8; /* Cambia el color de fondo al azul cuando el botón está activo (presionado) */
+  background-color: #22A6F8;
 }
 
+.btn:hover{
+  background-color: #22A6F8;
+}

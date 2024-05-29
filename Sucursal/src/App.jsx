@@ -19,8 +19,8 @@ function App() {
     <AuthProvider>
       <ColorProvider>
         <div className="App">
-          <Navbar /> {/* Navbar permanece */}
-          <NavbarMobile /> {/* Navbar permanece */}
+          <Navbar /> {}
+          <NavbarMobile /> {}
           
           <Routes> 
             <Route path="/" element={<Inicio />} /> 
@@ -39,7 +39,7 @@ function App() {
             <Route path="/menu" element={<Menu />} />
           </Routes> 
           
-          <Footer /> {/* Footer permanece */}
+          <Footer /> {}
         </div>
       </ColorProvider>
     </AuthProvider>
