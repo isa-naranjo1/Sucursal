@@ -1,0 +1,277 @@
+@font-face {
+  font-family: 'Misto';
+  src: url('./Misto.ttf') format('woff2'); 
+}
+
+.home {
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 500%;
+  font-weight: 700;
+  position: relative;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 100px;        
+}
+
+.subtitle {
+  font-size: 100%;
+  font-weight: 400;
+  margin-top: -20px;
+  text-align: center;
+  position: relative;
+}
+
+.right-title {
+  font-size: 40px;            
+  font-family: 'Misto';
+  text-align: right;          
+  padding-right: 20px;        
+}
+
+.work-table-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.work-table {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.work-table th, .work-table td {
+  padding: 60px;
+  border-bottom: 1px solid #ccc;
+}
+
+.work-table td.project-name {
+  font-weight: bold;
+  color: #000000; 
+}
+
+.work-table td.project-type {
+  color: #777;
+}
+
+.work-table td.project-focus {
+  text-decoration: underline;
+  color: #000000;
+}
+
+.work-table th.project-focus,
+.work-table td.project-focus {
+  border-bottom: 2px solid #ccc;
+}
+
+.work-table th {
+  background-color: #f2f2f2;
+}
+
+.work-table td {
+  background-color: #FCF2E6;
+}
+
+.services {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.services-title-wrap {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.services-title {
+  font-size: 60px;
+  font-weight: 400;            
+  color: #2E2A25;
+  text-align: left;
+  width: auto;
+  margin: 0;
+}
+
+.services-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper {
+  margin-right: 51px;
+  width: 100%;
+  position: relative;
+}
+
+.services-input {
+  width: 100%;
+  padding-left: 36px !important;
+}
+
+.search-icon {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}      
+
+.services-items {
+  padding-top: 100px;
+  display: flex;              
+  justify-content: space-between; 
+  align-items: center;       
+  width: 100%;               
+}
+
+.services-item {
+  width: 30%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.services-image {
+  width: 80%; /* Aumentamos el tamaño de las imágenes */
+  max-width: 300px; /* Límite máximo para las imágenes */
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Centramos las imágenes */
+}
+
+.services-title2 {
+  font-size: 20px;           
+  color: #2E2A25;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-weight: 400;       
+}
+
+.services-input {          
+  font-size: 20px;           
+  border: 2px solid #2E2A25 !important; 
+  margin-right: 10px;        
+  border-radius: 50px !important;
+  min-height: 30px !important;       
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 120px;         
+  }
+
+  .subtitle {
+    font-size: 30px;         
+  }
+
+  .right-title {
+    font-size: 30px;        
+    padding-right: 10px;     
+  }
+
+  .work-table {
+    width: 50%;             
+  }
+
+  .work-table td.project-name,
+  .work-table td.project-type,
+  .work-table td.project-focus {
+    font-size: 14px;
+  }
+
+  .services-title,
+  .services-search {
+    flex: 1 1 100%;          
+    text-align: center;      
+    margin-top: 10px;        
+  }
+
+  .services-search {
+    justify-content: center; 
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 57px;
+    margin-top: 0;       
+  }
+
+  .subtitle {
+    font-size: 20px;         
+  }
+
+  .right-title {
+    font-size: 20px;         
+    padding-right: 40px;      
+  }
+
+  @media (max-width: 480px) {
+    .work-table {
+      flex-direction: column;
+      align-items: flex-start; /* Alinea los elementos a la izquierda */
+      width: 90%; /* Establece el ancho al 90% del tamaño de la pantalla */
+    margin: 0 auto; /* Centra horizontalmente el work-table */
+    }
+  
+    .work-table td {
+      width: 100%;
+      padding: 8px;
+    }
+  
+    .work-table td.project-name,
+    .work-table td.project-type {
+      display: block;
+    }
+  
+    .work-table td.project-focus {
+      display: block;
+      margin-top: 10px; /* Añade espacio entre name/type y focus */
+    }
+
+  .services-input {
+    font-size: 10px;         
+    padding: 8px;            
+    margin-right: 5px;       
+  }
+
+  .services-items {
+    flex-direction: column;
+  }
+
+  .services-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+
+  .services-title-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .services-title {
+    font-size: 50px;
+  }
+
+  .carousel-item {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+}

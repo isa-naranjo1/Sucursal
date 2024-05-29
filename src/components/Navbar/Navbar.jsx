@@ -2,12 +2,14 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css'; 
 import logo from '../../assets/logo.png'
-
+import { useColor } from '../../Context/ColorContext';
 
 
 export function Navbar() {
+  const { backgroundColor } = useColor();
+  
     return (
-      <nav className="navbar">
+      <nav className="navbar" style={{ backgroundColor }}>
       <div className="navbar-left">
         <img src={logo} alt="Logo" className="logo" />
         

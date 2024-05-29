@@ -1,0 +1,348 @@
+.projects{
+    background-color: #22A6F8;
+}
+
+.title-projects {
+    font-size: 500%;
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 100px;
+}
+
+.subtitle-projects {
+    font-size: 100%;
+    font-weight: 400;
+    margin-top: -20px;
+    text-align: center;
+    position: relative;
+}
+
+.projects-info {
+    padding: 72px 51px 20px;
+}
+
+.projects-description {
+    margin-top: 0;
+}
+
+.work-with-us {
+    color: #2E2A25;
+    padding: 14px 33px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    font-size: 100%;
+    position: relative;
+    align-items: center;
+    background-color: #FCF2E6;
+    font-family: inherit;
+    float: right;
+}
+
+.projects-info-grid {
+    margin: 100px 0 90px 0;
+}
+
+.first-info, .second-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 124px;
+    padding: 91px 0;
+}
+
+.paragraph {
+    width: 527px;
+}
+
+.projects-preview {
+    padding-bottom: 40px;
+}
+
+.projects-filter {
+    color: #2E2A25;
+    padding: 14px 33px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    font-size: 100%;
+    position: relative;
+    align-items: center;
+    background-color: #FCF2E6;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.arrow-down-svg {
+    width: 14.45px;
+    height: 20px;
+}
+
+.more-btn{
+    padding: 14px 33px;
+    cursor: pointer;
+    border-color: #2E2A25;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 100%;
+    position: relative;
+    background-color: transparent;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.arrow-right-svg {
+    height: 14.45px;
+    width: 20px;
+}
+
+.projects-grid {
+    padding: 64px 0 49px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.grid-element {
+    position: relative;
+    cursor: pointer;
+    width: 400px;
+    height: 400px;
+}
+
+.grid-element > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.3s ease;
+}
+
+.project-name {
+    position: absolute;
+    bottom: -60px;
+    z-index: 1;
+    color: #2E2A25;
+    font-weight: 400;
+}
+
+.hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:#2e2a254f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid-element:hover > img {
+    filter: blur(4px);
+}
+  
+.grid-element:hover .hover-content {
+    opacity: 1;
+}
+  
+.view-text {
+    color: #FCF2E6;
+    font-weight: 700;
+    font-size: 64px;
+}
+
+.project-detail-display {
+    margin-top: 50px;
+    margin-bottom: 88px;
+    height: 700px;
+    border: 1px solid #2E2A25;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.project-detail-display::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+.project-detail-display::-webkit-scrollbar-track {
+    border: 1px solid #2E2A25; 
+    border-radius: 10px;
+}
+
+.project-detail-display::-webkit-scrollbar-thumb {
+    background: #2E2A25; 
+    border-radius: 10px;
+  }
+
+.project-detail-img {
+    width: 1200px;
+    padding: 20px 60px;
+}
+
+.project-detail-img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-detail-title {
+    padding-left: 60px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.go-back-btn {
+    color: #2E2A25;
+    padding: 14px 33px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    font-size: 100%;
+    position: relative;
+    align-items: center;
+    background-color: #FCF2E6;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.arrow-back-svg {
+    height: 14.45px;
+    width: 20px;
+}
+
+/* responsive */
+
+@media (max-width: 480px) {
+    .projects {
+        width: 100%;
+    }
+
+    .title-projects {
+      font-size: 57px;
+      margin-top: 0;
+    }
+
+    .subtitle-projects {
+        font-size: 16px;
+    }
+
+    .projects-info {
+        padding: 54px 20px 10px;
+    }
+    
+    .projects-description {
+        font-size: 16px;
+    }
+    
+    .work-with-us {
+        padding: 9px 15px;
+        border-radius: 16px;
+        font-size: 16px;
+    }
+    
+    .projects-info-grid {
+        margin: 0;
+    }
+    
+    .first-info, .second-info {
+        display: block;
+        font-size: 16px;
+        padding: 10px 0;
+    }
+    
+    .first-info {
+        margin-top: 60px;
+    }
+
+    .paragraph {
+        width: 395px;
+    }
+    
+    .projects-preview {
+        padding-bottom: 0;
+    }
+    
+    .projects-filter {
+        margin-top: 30px;
+        padding: 9px 15px;
+        border-radius: 16px;
+        font-size: 16px;
+    }
+    
+    .arrow-down-svg {
+        width: 10px;
+        height: 15px;
+    }
+    
+    .more-btn{
+        padding: 9px 15px;
+        border-radius: 16px;
+        font-size: 16px;
+    }
+    
+    .arrow-right-svg {
+        height: 10px;
+        width: 15px;
+    }
+    
+    .projects-grid {
+        padding: 30px 0;
+        gap: 16px;
+    }
+    
+    .grid-element {
+        width: 187px;
+        height: 187px;
+        margin-bottom: 30px;
+    }
+    
+    .project-name {
+        bottom: -50px;
+        font-size: 16px;
+    }
+    
+    .project-detail-display {
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+    
+    .project-detail-img {
+        width: 320px;
+        padding: 20px 20px;
+    }
+    
+    .project-detail-title {
+        padding-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 0px;
+        font-size: 12px;
+    }
+    
+    .go-back-btn {
+        padding: 9px 15px;
+        border-radius: 16px;
+        font-size: 16px;
+        margin-top: 30px;
+    }
+    
+    .arrow-back-svg {
+        height: 10px;
+        width: 15px;
+    }
+}
