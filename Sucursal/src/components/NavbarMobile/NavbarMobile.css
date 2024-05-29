@@ -1,0 +1,39 @@
+.navbar-web {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+  color: #2E2A25;
+}
+
+@media (min-width:629px){
+  .navbar-web{
+    display: none;
+  }
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: larger;
+}
+
+.navbar-right {
+  display: flex;
+  padding-right: 0;
+  align-items: center;
+}
+
+.logo {
+  width: 70px;
+  margin-right: 10px;
+}
+
+.Menu,
+.img-login{
+background-color: transparent;
+border: none;
+}
+

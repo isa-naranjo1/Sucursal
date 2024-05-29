@@ -1,0 +1,163 @@
+.title-wrapper{
+  padding-left: 51px;
+}
+
+.title-login {
+  font-size: 500%;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 0;
+  margin-top: 100px;
+}
+
+.p-btn {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: -35px;
+}
+  
+.sign-up-button {
+  margin-left: 10px;
+  font-size: 150%;
+  font-weight: 700;
+  color: #22A6F8;
+  background-color: transparent;
+  font-family: inherit;
+  border: none;
+
+}
+
+.LogIn-form-container {
+  display: flex;
+  border: 2px solid #000;
+  padding: 20px;
+  width: 91%;
+  flex-direction: column;
+  margin: 20px 51px;
+}
+
+.input{
+   margin-bottom: 20px;
+}
+  
+input[type="password"],
+input[type="emailLogin"]{
+  padding-left: 0;
+  font-family: 'Clash Display', sans-serif;
+  width: 96%;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  min-height: 50px;
+  border-bottom: 1.5px solid #000; 
+}
+
+.input input::placeholder {
+  font-size: 18px; /* Tamaño del texto del placeholder */
+  color: #2E2A25; /* Color del texto del placeholder */
+}
+  
+.login{
+  padding: 14px 33px;
+  cursor: pointer;
+  border-color: #2E2A25;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 100%;
+  position: relative;
+  background-color: transparent;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.login-google{
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 60px;
+  margin: auto;
+  cursor: pointer;
+  border-color: #2E2A25;
+  border-radius: 20px;
+  font-size: 100%;
+  background-color: transparent;
+  font-family: inherit;
+  margin-bottom: 20px;
+}
+
+.google-icon {
+  max-height: 50px;
+  margin-right: 5px;
+}
+
+/* responsive */
+
+@media (max-width: 480px) {
+  .title-wrapper{
+    padding-left: 20px;
+  }
+  
+  .title-login {
+    font-size: 57px;
+    margin-top: 0;
+  }
+  
+  .p-btn {
+    font-size: 16px;
+  }
+    
+  .sign-up-button {
+    margin-left: 2px;
+    font-size: 16px;
+  }
+  
+  .LogIn-form-container {
+    border: 0.7px solid #000;
+    width: 80%;
+    max-width: 390px;
+    margin: 24px 20px;
+  }
+  
+  .input{
+     margin-bottom: 10px;
+  }
+    
+  input[type="password"],
+  input[type="emailLogin"]{
+    font-size: 16px;
+    width: 100%;
+    border-bottom: 0.7px solid #000; 
+  }
+  
+  .input input::placeholder {
+    font-size: 16px;
+  }
+    
+  .login{
+    padding: 9px 15px;
+    border-radius: 16px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    margin-top: 250px;
+  }
+  
+  .login-google{
+    padding: 9px 15px;
+    border-radius: 16px;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .google-icon {
+    max-height: 32px;
+    margin-right: 5px;
+  }
+}

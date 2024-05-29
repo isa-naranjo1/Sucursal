@@ -1,0 +1,34 @@
+.footer {
+  padding: 30px 119px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-item {
+  text-decoration: none;
+  color: #2E2A25;
+  font-weight: normal;
+}
+
+@media (max-width: 480px) {
+  .footer {
+    font-size: 12px;
+    padding: 40px 20px;
+  }
+  
+  .footer-content {
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-item {
+    text-decoration: none;
+    color: #2E2A25;
+    margin: 0;
+    font-weight: normal;
+  }
+}
