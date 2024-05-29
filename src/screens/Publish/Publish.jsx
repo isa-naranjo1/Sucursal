@@ -101,9 +101,10 @@ export function Publish() {
       if (result.isConfirmed) {
         navigate('/proyectos')
       }else if (
+        /* Si se selecciona "Crear otro proyecto" */
         result.dismiss === Swal.DismissReason.cancel
       ) {
-        window.location.reload(); 
+        window.location.reload();
       }
     })
 
