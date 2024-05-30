@@ -1,5 +1,6 @@
 import React from "react";
 import "../../Screens/AboutUs/AboutUs.css";  // Ajusta la ruta para que sea correcta
+import './ContentSection.css'
 
 const ContentSection = ({
   name,
@@ -18,7 +19,7 @@ const ContentSection = ({
     </div>
     <div className={name === 'Kazura' || name === 'Isabella' ? 'details-right' : 'details'}>
       <p className="tags">{tags}</p>
-      <div className="buttons">
+      <div className="buttons-about">
         {['ABOUT', 'INTEREST', 'CREDENTIALS'].map((button) => (
           <button
             key={button}

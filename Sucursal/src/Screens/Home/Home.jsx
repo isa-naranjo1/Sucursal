@@ -1,76 +1,67 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Home.css';
 import Carousel from "../../components/Carrousel/Carrousel";
-
-const projects = [
-  {
-    name: "Spotify Piano",
-    type: "Interactive publicity",
-    focus: "Applications echosystems"
-  },
-  {
-    name: "Rituals of Madness",
-    type: "Card game",
-    focus: "Socio-technological interaction"
-  },
-  {
-    name: "Charlie B Tour",
-    type: "Tour publicity",
-    focus: "Graphic bidimensional design"
-  },
-  {
-    name: "Intu Makeover",
-    type: "Visual Accessibility",
-    focus: "Human-computer interaction"
-  },
-  {
-    name: "Devenir del Sur",
-    type: "Concert publicity",
-    focus: "Graphic bidimensional design"
-  }
-];
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../firebase';
+import { Link } from 'react-router-dom';
 
 export function Inicio() {
+  // Almacena los proyectos recuperados de Firebase
+  const [projects, setProjects] = useState([]);
+ 
+  // Carga los proyectos desde Firebase 
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const querySnapshot = await getDocs(collection(db, 'documentos'));
+      const projectsData = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
+      setProjects(projectsData);
+    };
+
+    fetchProjects();
+  }, []);
+
   return (
     <div className="home">
-      <h1 className="title">SUCURSAL</h1>
-      <h2 className="subtitle">COLLECTIVE PORTFOLIO</h2>
-      <Carousel /> {/* Mueve el Carousel aquí */}
-      <h3 className="right-title">OUR WORK</h3>
-
-      <div className="work-table-container">
-        <table className="work-table">
-          
-          <tbody>
-            {projects.map((project, index) => (
-              <tr key={index}>
-                <td style={{ fontWeight: 'bold', color: '#000000' }}>{project.name}</td>
-                <td className="project-type">{project.type}</td>
-                <td className="project-focus">{project.focus}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      {/* Encabezado */}
+      <div className="header">
+        <h1 className="title">SUCURSAL</h1>
+        <h2 className="subtitle">COLLECTIVE PORTFOLIO</h2>
+        <Carousel />
       </div>
 
+      {/* Nuestro trabajo */}
+      <div className="our-work">
+        <h3 className="right-title">OUR WORK</h3>
+        <div className="work-table-container">
+          <table className="work-table">
+            <tbody>
+              {projects.map((project, index) => (
+                <tr key={index}>
+                  <td style={{ fontWeight: 'bold', color: '#000000' }}>
+                    <Link to="/proyectos" style={{ textDecoration: 'none', color: 'inherit' }}>
+                      {project.title}
+                    </Link>
+                  </td>
+                  <td className="project-type">{project.categories.join(',  ')}</td>
+                  <td className="project-focus">
+                    <Link to="/about-us" style={{ textDecoration: 'none', color: 'inherit' }}>
+                      {project.autor}
+                    </Link>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Servicios */}
       <div className="services">
         <div className='services-title-wrap'>
           <svg xmlns="http://www.w3.org/2000/svg" width="133" height="16" viewBox="0 0 133 16" fill="none">
             <path d="M132.707 8.70711C133.098 8.31658 133.098 7.68342 132.707 7.29289L126.343 0.928932C125.953 0.538408 125.319 0.538408 124.929 0.928932C124.538 1.31946 124.538 1.95262 124.929 2.34315L130.586 8L124.929 13.6569C124.538 14.0474 124.538 14.6805 124.929 15.0711C125.319 15.4616 125.953 15.4616 126.343 15.0711L132.707 8.70711ZM0 9H132V7H0V9Z" fill="#2E2A25"/>
           </svg>
           <h2 className="services-title">SERVICES</h2>
-        </div>     
-        <div className="services-search">
-          <div className="input-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 38 38" fill="none" className="search-icon">
-              <path d="M25.1412 25.1412L31.8587 31.8587M28.5 16.625C28.5 23.1834 23.1834 28.5 16.625 28.5C10.0666 28.5 4.75 23.1834 4.75 16.625C4.75 10.0666 10.0666 4.75 16.625 4.75C23.1834 4.75 28.5 10.0666 28.5 16.625Z" stroke="#2E2A25" strokeWidth="2" strokeLinecap="round"/>
-            </svg>
-            <input 
-              type="text" 
-              className="services-input"
-              placeholder="What are you looking for..." 
-            />
-          </div>
         </div>
         <div className="services-items">
           <div className="services-item">
@@ -87,6 +78,7 @@ export function Inicio() {
           </div>
         </div>
       </div>
+      
     </div>
   );
 }

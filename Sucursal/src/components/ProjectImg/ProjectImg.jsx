@@ -5,6 +5,7 @@ import basura from '../../assets/basura.svg';
 import Swal from 'sweetalert2';
 import './ProjectImg.css'; 
 
+
 const ProjectImg = ({ onProjectClick, filterText }) => {
   const [projects, setProjects] = useState([]);
 

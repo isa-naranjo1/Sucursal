@@ -63,7 +63,7 @@ export function AboutUs() {
         setContentState={setIsabellaContent}
         imgSrc="https://i.ibb.co/7bvtGcf/Isa.png"
         tags="UX • INVESTIGATION • DEVELOPMENT"
-        aboutText="Seven semesters of telematics engineering, six semesters of interactive media design, and courses in user experience."
+        aboutText="22-year-old designer, with creative skills and passionate about creating unique experiences. She has six semesters of telematics engineering, seven semesters of interactive media design and user experience courses."
         credentials={['square-small-isabella', 'square-small-isabella']}
       />
 

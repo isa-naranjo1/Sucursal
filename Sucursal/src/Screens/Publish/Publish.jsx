@@ -20,9 +20,9 @@ export function Publish() {
   const navigate = useNavigate();
   const [categories, setCategories] = useState([]); 
   const [options, setOptions] = useState({
-    diseño: false,
-    publicidad: false,
-    branding: false,
+    Desing: false,
+    Publicity: false,
+    Branding: false,
   });
 
 
@@ -214,38 +214,43 @@ export function Publish() {
         </div>
 
         <div className="options-container">
-        <label className='tiposTitle'>TIPO DE CATEGORIA</label>
-            <div>
-              <input
-                type="checkbox"
-                id="diseño"
-                name="diseño"
-                checked={options.diseño}
-                onChange={handleOptionChange}
-              />
-              <label htmlFor="diseño">Diseño</label>
-            </div>
-            <div>
-              <input
-                type="checkbox"
-                id="publicidad"
-                name="publicidad"
-                checked={options.publicidad}
-                onChange={handleOptionChange}
-              />
-              <label htmlFor="publicidad">Publicidad</label>
-            </div>
-            <div>
-              <input
-                type="checkbox"
-                id="branding"
-                name="branding"
-                checked={options.branding}
-                onChange={handleOptionChange}
-              />
-              <label htmlFor="branding">Branding</label>
-            </div>
-        </div>
+          <label className='tiposTitle'>TIPO DE CATEGORIA</label>
+              <div className="option">
+                <label htmlFor="Desing" className="checkbox-label">
+                  <input
+                    type="checkbox"
+                    id="Desing"
+                    name="Desing"
+                    checked={options.Desing}
+                    onChange={handleOptionChange}
+                    className="custom-checkbox"
+                  />
+                  Desing
+                </label>
+              </div>
+              <div className="option">
+                <input
+                  type="checkbox"
+                  id="Publicity"
+                  name="Publicity"
+                  checked={options.Publicity}
+                  onChange={handleOptionChange}
+                  className="custom-checkbox"
+                />
+                <label htmlFor="publicidad">Publicity</label>
+              </div>
+              <div className="option">
+                <input
+                  type="checkbox"
+                  id="Branding"
+                  name="Branding"
+                  checked={options.Branding}
+                  onChange={handleOptionChange}
+                  className="custom-checkbox"
+                />
+                <label htmlFor="branding">Branding</label>
+              </div>
+             </div>
         
       </div>
       <div className="buttons-wrapper">

@@ -54,8 +54,8 @@ input[type="emailLogin"]{
 }
 
 .input input::placeholder {
-  font-size: 18px; /* Tamaño del texto del placeholder */
-  color: #2E2A25; /* Color del texto del placeholder */
+  font-size: 18px;   
+  color: #2E2A25; 
 }
   
 .login{
@@ -74,6 +74,7 @@ input[type="emailLogin"]{
   justify-content: space-between;
   gap: 10px;
   margin-bottom: 20px;
+  color: black;
 }
 
 .login-google{
@@ -91,6 +92,7 @@ input[type="emailLogin"]{
   background-color: transparent;
   font-family: inherit;
   margin-bottom: 20px;
+  color: black;
 }
 
 .google-icon {

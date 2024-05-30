@@ -10,6 +10,8 @@ import { Projects } from './Screens/Projects/Projects';
 import { LogIn } from './Screens/LogIn/LogIn'
 import { Menu } from './Screens/Menu/menu';
 import { Publish } from './Screens/Publish/Publish';
+import { WorkWithUs } from './Screens/WorkWithUs/WorkWithUs';
+import { Profile } from './Screens/Profile/Profile';
 import { ColorProvider } from './Context/ColorContext';
 import { AuthProvider } from './Context/AuthContext';
 import { ProtectedRoute } from './Screens/Error/ProtectedRoute';
@@ -27,12 +29,21 @@ function App() {
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/contact-us" element={<Contact />} />
             <Route path="/proyectos" element={<Projects />} />
+            <Route path="/work-with-us" element={<WorkWithUs />} />
             <Route path="/login" element={<LogIn />} />
             <Route 
               path="/publish" 
               element={
                 <ProtectedRoute>
                   <Publish />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/profile" 
+              element={
+                <ProtectedRoute>
+                  <Profile />
                 </ProtectedRoute>
               } 
             />

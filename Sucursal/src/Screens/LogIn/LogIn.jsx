@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import './LogIn.css'; 
 import google from '../../assets/google.png';
@@ -8,7 +7,8 @@ import { useNavigate } from 'react-router-dom';
 export function LogIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { login, loginWithGoogle } = useAuth();
+  const [username, setUsername] = useState('');
+  const { login, loginWithGoogle, register } = useAuth();
   const navigate = useNavigate();
 
   const handleLogin = async () => {
@@ -29,17 +29,34 @@ export function LogIn() {
     }
   };
 
+  const handleSignUp = async () => {
+    try {
+      await register(email, password, username);
+      navigate('/');
+    } catch (error) {
+      console.error('Failed to sign up', error);
+    }
+  };
+
   return (
     <>
       <div className='title-wrapper'>
         <h1 className='title-login'>LOG-IN</h1>
         <div className='p-btn'>
           <p>Don't have an account?</p>
-          <button className="sign-up-button">SIGN UP</button>
+          <button className="sign-up-button" onClick={handleSignUp}>SIGN UP</button>
         </div>
       </div>
       
       <div className="LogIn-form-container">
+        <div className="input">
+          <input 
+            type="text" 
+            placeholder="USERNAME" 
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </div>
         <div className="input">
           <input 
             type="email" 

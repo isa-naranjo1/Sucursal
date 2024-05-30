@@ -14,7 +14,7 @@ export function NavbarMobile() {
   };
 
   return (
-    <nav className="navbar-web">
+    <nav className="navbar-movil">
       <div className="navbar-left">
         <img src={logo} alt="Logo" className="logo" />
       </div>

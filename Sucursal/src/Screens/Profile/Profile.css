@@ -1,0 +1,49 @@
+.profile {
+    padding: 0 51px;
+    max-width: 100%;
+}
+
+.title-profile {
+    font-size: 500%;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 0;
+    margin-top: 100px;
+}
+
+.subtitle-profile {
+    font-size: 100%;
+    margin-bottom: 5px;
+}
+
+.profile-form-container {
+    border: 2px solid #000;
+    padding: 20px;
+    width: 100%;
+    max-width: 1365px;
+}
+
+.profile-p {
+    margin-bottom: -15px;
+    margin-top: 5px;
+}
+
+/* responsive */
+
+@media (max-width: 480px) {
+    .profile {
+        padding: 0 20px;
+    }
+
+    .title-profile {
+        font-size: 57px;
+        margin-top: 0;
+    }
+
+    .profile-form-container {
+        margin-top: 54px;
+        border: 0.7px solid #000;
+        width: 89%;
+        max-width: 390px;
+    }
+}

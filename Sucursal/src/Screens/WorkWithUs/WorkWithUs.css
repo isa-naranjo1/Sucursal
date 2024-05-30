@@ -1,9 +1,9 @@
-.contact {
+.work {
     padding: 0 51px;
     max-width: 100%;
 }
 
-.title-contact {
+.title-work {
     font-size: 500%;
     font-weight: 700;
     position: relative;
@@ -11,7 +11,7 @@
     margin-top: 100px;
 }
 
-.contact-form-container {
+.work-form-container {
     border: 2px solid #000;
     padding: 20px;
     width: 100%;
@@ -21,7 +21,7 @@
 .input {
     margin-bottom: 20px;
 }
-input[type="number"],
+
 input[type="text"],
 input[type="email"] {
     padding-left: 0;
@@ -51,7 +51,7 @@ textarea {
     color: #2E2A25;
 }
 
-.contact-btn {
+.work-btn {
     padding: 14px 33px;
     cursor: pointer;
     border-color: #2E2A25;
@@ -71,16 +71,16 @@ textarea {
 /* responsive */
 
 @media (max-width: 480px) {
-    .contact {
+    .work {
         padding: 0 20px;
     }
 
-    .title-contact {
+    .title-work {
         font-size: 57px;
         margin-top: 0;
     }
 
-    .contact-form-container {
+    .work-form-container {
         margin-top: 54px;
         border: 0.7px solid #000;
         width: 89%;
@@ -106,7 +106,7 @@ textarea {
         font-size: 16px;
     }
 
-    .contact-btn {
+    .work-btn {
         padding: 9px 15px;
         border-radius: 16px;
         font-size: 16px;

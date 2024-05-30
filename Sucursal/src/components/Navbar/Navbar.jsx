@@ -7,7 +7,7 @@ import { useAuth } from '../../Context/AuthContext';
 
 export function Navbar() {
   const { backgroundColor } = useColor();
-  const { currentUser, logout } = useAuth();
+  const { currentUser } = useAuth();
 
   return (
     <nav className="navbar" style={{ backgroundColor }}>
@@ -53,7 +53,6 @@ export function Navbar() {
             <NavLink to="/profile" className="nav-item">
               <button className="btn">Profile</button>
             </NavLink>
-            <button className="btn" onClick={logout}>Logout</button>
           </>
         ) : (
           <NavLink to="/login" className="nav-item">

@@ -41,6 +41,10 @@
     float: right;
 }
 
+.work-with-us-navlink {
+    text-decoration: none;
+}
+
 .projects-info-grid {
     margin: 100px 0 90px 0;
 }
@@ -49,7 +53,6 @@
     display: flex;
     justify-content: space-between;
     gap: 124px;
-    padding: 91px 0;
 }
 
 .paragraph {
@@ -57,7 +60,7 @@
 }
 
 .projects-preview {
-    padding-bottom: 40px;
+    padding-bottom: 100px;
 }
 
 .projects-filter {
@@ -82,23 +85,6 @@
     height: 20px;
 }
 
-.more-btn{
-    padding: 14px 33px;
-    cursor: pointer;
-    border-color: #2E2A25;
-    text-decoration: none;
-    border-radius: 20px;
-    font-size: 100%;
-    position: relative;
-    background-color: transparent;
-    font-family: inherit;
-    display: flex;
-    align-items: center;
-    margin-top: 10%;
-    margin-left: 40%;
-    justify-content: space-between;
-    gap: 10px;
-}
 
 .arrow-right-svg {
     height: 14.45px;
@@ -108,8 +94,8 @@
 .projects-grid {
     padding: 64px 0 49px 0;
     display: flex;
-    justify-content: space-between;
-    gap: 100px;
+    row-gap: 150px;
+    column-gap: 90px;
     flex-wrap: wrap;
 }
 
@@ -168,51 +154,16 @@
     font-size: 64px;
 }
 
-.project-detail-display {
-    margin-top: 50px;
-    margin-bottom: 88px;
-    height: 700px;
-    border: 1px solid #2E2A25;
-    overflow-y: scroll;
-    overflow-x: hidden;
+
+.filter-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
 }
-
-.project-detail-display::-webkit-scrollbar {
-    background-color: transparent;
-}
-
-.project-detail-display::-webkit-scrollbar-track {
-    border: 1px solid #2E2A25; 
-    border-radius: 10px;
-}
-
-.project-detail-display::-webkit-scrollbar-thumb {
-    background: #2E2A25; 
-    border-radius: 10px;
-  }
-
-
-.project-detail-display iframe{
-    width: 96%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    padding: 18px;
-    border: transparent;
-    position: relative;
-}
-
-
-
-.project-detail-display p,
-.project-detail-title {
-    padding-left: 60px;
-    margin-top: 24px;
-    margin-bottom: 25px;
-}
-
-.go-back-btn {
+  
+  .filter-button {
     color: #2E2A25;
+    margin-bottom: 12px;
     padding: 14px 33px;
     cursor: pointer;
     border: none;
@@ -226,14 +177,19 @@
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-}
-
-.arrow-back-svg {
-    height: 14.45px;
-    width: 20px;
-}
-
-
+    flex-direction: row-reverse;
+    margin-left: 0%;
+  }
+  
+  .filter-input {
+    padding: 14px 10px;
+    border-radius: 20px;
+    width: 65%;
+    font-size: 100%;
+    background-color: #fcf2e600;
+    font-family: inherit;
+  }
+  
 
 
 
@@ -328,6 +284,78 @@
         font-size: 16px;
     }
     
+}
+
+
+
+.project-detail-display {
+    margin-top: 50px;
+    margin-bottom: 88px;
+    height: 700px;
+    border: 1px solid #2E2A25;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.project-detail-display::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+.project-detail-display::-webkit-scrollbar-track {
+    border: 1px solid #2E2A25; 
+    border-radius: 10px;
+}
+
+.project-detail-display::-webkit-scrollbar-thumb {
+    background: #2E2A25; 
+    border-radius: 10px;
+  }
+
+
+.project-detail-display iframe{
+    width: 96%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    padding: 18px;
+    border: transparent;
+    position: relative;
+}
+
+
+
+.project-detail-display p,
+.project-detail-title {
+    padding-left: 60px;
+    margin-top: 24px;
+    margin-bottom: 25px;
+}
+
+.go-back-btn {
+    color: #2E2A25;
+    padding: 14px 33px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    font-size: 100%;
+    position: relative;
+    align-items: center;
+    background-color: #FCF2E6;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-left: 0%;
+}
+
+.arrow-back-svg {
+    height: 14.45px;
+    width: 20px;
+}
+
+
+@media (max-width: 480px) {
     .project-detail-display {
         margin-top: 30px;
         margin-bottom: 0;
@@ -356,4 +384,4 @@
         height: 10px;
         width: 15px;
     }
-}
+    }

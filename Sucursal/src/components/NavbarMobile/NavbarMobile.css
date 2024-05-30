@@ -1,4 +1,4 @@
-.navbar-web {
+.navbar-movil {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,7 +7,7 @@
 }
 
 @media (min-width:629px){
-  .navbar-web{
+  .navbar-movil{
     display: none;
   }
 }

@@ -10,7 +10,9 @@ export function Projects() {
   const { setBackgroundColor } = useColor();
   const [iframeLink, setIframeLink] = useState('');
   const [projectDescription, setProjectDescription] = useState('');
-  const [filterText, setFilterText] = useState(''); 
+  const [filterText, setFilterText] = useState('');
+  const [showInput, setShowInput] = useState(false);
+
 
   useEffect(() => {
     setBackgroundColor('#22A6F8');
@@ -26,6 +28,10 @@ export function Projects() {
     setShowDetail(true);
   };
 
+  const toggleInput = () => {
+    setShowInput(!showInput);
+  };
+
   return (
     <div className='projects'>
       <h1 className='title-projects'>PROJECTS</h1>
@@ -34,7 +40,11 @@ export function Projects() {
         <p className='projects-description'>
           SUCURSAL is a group of four young students from Universidad Icesi with a shared passion for creativity and design. We decided to combine our skills and visions to give life to 'Sucursal,' an innovative design firm founded in 2024.
         </p>
-        <button className='work-with-us'>WORK WITH US</button>
+        <button className='work-with-us' to="/work-with-us">
+          <NavLink className='work-with-us-navlink' to="/work-with-us">
+           WORK WITH US
+          </NavLink>
+          </button>
         <div className='projects-info-grid'>
           <div className='first-info'>
             <div className='paragraph'>
@@ -65,35 +75,45 @@ export function Projects() {
             <line x1="0" y1="0" x2="100%" y2="0" style={{stroke:"#2E2A25", strokeWidth:1}} />
           </svg>
         </div>
-        <input
-          type="text"
-          placeholder="Filter by author, description, or category"
-          value={filterText}
-          onChange={(e) => setFilterText(e.target.value)}
-          className="filter-input"
-        />
+
         {!showDetail && (
-          <div className='projects-preview'>
+          <div className="filter-container">
+            <button onClick={toggleInput} className="filter-button">
+            <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="28"
+                    viewBox="0 0 21 28"
+                    fill="none"
+                    className='arrow-down-svg'
+                    >
+                  <path
+                    d="M10.5 25.875V1.5M1.30762 17.7498L10.5 26.9422L19.6924 17.7498"
+                    stroke="#2E2A25"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    />
+                  </svg>
+                FILTERS
+              </button>
+
+            {showInput && (
+              <input
+                className="filter-input"
+                type=""
+                placeholder="Filter by author, description, or category (Desing, Publicity, Branding)"
+                value={filterText}
+                onChange={(e) => setFilterText(e.target.value)}
+              />
+            )}
+          </div>
+         )}
+
+        {!showDetail && (
+          <div id='project-grid' className='projects-preview'>
             <ProjectImg onProjectClick={handleProjectClick} filterText={filterText} />
-            <button className='more-btn'>
-              MORE
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="28"
-                height="21"
-                viewBox="0 0 28 21"
-                fill="none"
-                className="arrow-right-svg"
-              >
-                <path
-                  d="M25.8462 10.7212L1.47119 10.7212M17.721 19.9136L26.9134 10.7212L17.721 1.5288"
-                  stroke="#2E2A25"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
+            
           </div>
         )}
         {showDetail && (

@@ -255,10 +255,27 @@ input[type="description"]{
   text-align: center;
 }
 
-.options-container{
+.options-container {
+  margin: 20px;
     display: flex;
-    padding: -11px;
     justify-content: space-evenly;
-    margin-top: 4%;
-    margin-bottom: 20px
+    align-items: center;
 }
+
+.option {
+  background-color: transparent; /* Fondo transparente */
+  border: 2px solid #2E2A25; /* Bordes de color rojo */
+  border-radius: 20px; /* Bordes curvos */
+  padding: 7px; /* Espaciado interno */
+  margin-bottom: 10px; /* Espaciado entre opciones */
+  width: 110px;
+}
+
+
+.option input[type="checkbox"] {
+  transform: scale(1.3); 
+  margin-right: 8px;
+
+}
+
+
